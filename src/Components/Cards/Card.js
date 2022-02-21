@@ -52,8 +52,8 @@ const LearnMore = styled.button`
     text-decoration: none;
     transition: all 250ms;
     touch-action: manipulation;
-}
 
+`
 /* .button-6:hover,
 .button-6:focus {
   border-color: rgba(0, 0, 0, 0.15);
@@ -74,8 +74,6 @@ const LearnMore = styled.button`
 } */
 
 
-
-`
 const Category = styled.div`
     margin: 20px 0 50px 0;
     @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Montserrat:wght@700&display=swap');
