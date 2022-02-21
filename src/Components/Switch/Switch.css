@@ -1,0 +1,13 @@
+.Container {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: red;
+  }
+  
+  .annully {
+    background-color: #FFFFFF;
+    opacity: 50%;
+    z-index: 30;
+  }
