@@ -9,6 +9,7 @@ const CardsWrapper = styled.div`
     flex: row;
     align-items: center;
     justify-content: center;
+    
 `
 function Cards({monthly}){ 
 

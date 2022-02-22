@@ -1,7 +1,5 @@
 import React from 'react';
-import { createGlobalStyle } from "styled-components"
 import styled from 'styled-components'
-import './Card.css';
 
 const BodyFont = styled.span`
     size: 18px;
@@ -10,7 +8,6 @@ const BodyFont = styled.span`
 const Line = styled.hr`
     color: #979797;  
 `
-
 export const CardWrapper = styled.div`
     display: flex;
     flex-flow: column wrap;
@@ -65,7 +62,7 @@ export default function Card ({data}) {
     return(
         <CardWrapper>
             <Category><span>{data.category}</span></Category>
-            <div className='Price'><span style={{"font-size": "72px"}}>{data.price}</span></div>
+            <div><span style={{"font-size": "72px"}}>{data.price}</span></div>
             <div><Line /></div>
             <div><span>{data.storage} Shortage</span></div>
             <div><Line /></div>
