@@ -20,7 +20,7 @@ const Slider = styled.span`
     cursor: pointer;
     height: 32px;
     width: 55px;
-    background-color: #ccc;
+    /* background-color: #ccc; */
     -webkit-transition: .4s;
     transition: .4s;
     border-radius: 30px;
@@ -51,7 +51,7 @@ const SwitchContainer = styled.div`
         display: flex;
         align-items: center;
         align-items: center;
-        color: #6E728E;
+        /* color: #6E728E; */
         font-weight: 700;
         opacity: 50%;
     }

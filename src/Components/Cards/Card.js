@@ -14,14 +14,12 @@ const Line = styled.hr`
 export const CardWrapper = styled.div`
     display: flex;
     flex-flow: column wrap;
-    padding: 20px 40px 20px 40px;
+    padding:  ${props => props.theme.padding} 40px ${props => props.theme.padding}  40px;
     width: 25%;
     text-align: center;
-    /* margin:  20px 30px 10px 30px; */
-    border: 5px solid red;
     font-family: 'Montserrat';
     margin-top: 50px;
-    background-color: white;
+    background: linear-gradient(${props => props.theme.backgroundLight},${props => props.theme.backgroundDark});
     border-radius: 10px;
 
     div{
@@ -31,7 +29,7 @@ export const CardWrapper = styled.div`
     span{
         @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Montserrat:wght@700&display=swap');
         margin: 5px;
-        color: #6E728E;
+        color:  ${props => props.theme.color};
         font-family: 'Montserrat', sans-serif;
     }
 `
@@ -39,40 +37,18 @@ const LearnMore = styled.button`
     width: 100%;
     border-radius: 20px;
     font-family: 'Montserrat', sans-serif;
-    /* font-size: 13px; */
     margin: 20px 1px 20px 1px;
-    background-color: #FFFFFF;
+    background: linear-gradient(${props => props.theme.light},${props => props.theme.dark});
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: .25rem;
-    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-    color: rgba(0, 0, 0, 0.85);
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;    
     cursor: pointer;
     line-height: 1.25;
     min-height: 3rem;
-    text-decoration: none;
     transition: all 250ms;
     touch-action: manipulation;
-
+    color: ${props => props.theme.backgroundDark};
 `
-/* .button-6:hover,
-.button-6:focus {
-  border-color: rgba(0, 0, 0, 0.15);
-  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
-  color: rgba(0, 0, 0, 0.65);
-}
-
-.button-6:hover {
-  transform: translateY(-1px);
-}
-
-.button-6:active {
-  background-color: #F0F0F1;
-  border-color: rgba(0, 0, 0, 0.15);
-  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
-  color: rgba(0, 0, 0, 0.65);
-  transform: translateY(0);
-} */
-
 
 const Category = styled.div`
     margin: 20px 0 50px 0;
@@ -82,20 +58,20 @@ const Category = styled.div`
         font-family: 'Montserrat', sans-serif;
         line-height: 28px;
         font-weight: 700;
-        color: #6E728E;
+        color: ${props => props.theme.priceColor};
     }
 `
-export default function Card () {
+export default function Card ({data}) {
     return(
         <CardWrapper>
-            <Category><span>Master</span></Category>
-            <div className='Price'><span style={{"font-size": "72px", "color": "#4A4D60"}}>$24.99</span></div>
+            <Category><span>{data.category}</span></Category>
+            <div className='Price'><span style={{"font-size": "72px"}}>{data.price}</span></div>
             <div><Line /></div>
-            <div><span> Shortage</span></div>
+            <div><span>{data.storage} Shortage</span></div>
             <div><Line /></div>
-            <BodyFont>Users allowed</BodyFont>
+            <BodyFont>{data.user} Users allowed</BodyFont>
             <div><Line /></div>
-            <div><BodyFont>Send up to GB</BodyFont></div>
+            <div><BodyFont>Send up to {data.GB} GB</BodyFont></div>
             <LearnMore>Learn More</LearnMore>
         </CardWrapper>
     );

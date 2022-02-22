@@ -22,7 +22,7 @@ function App() {
     <div className='App background'>
       <div><Header>Our Pricing</Header></div>
       <Switch monthly={monthly} onClick={toggleHandler}/>
-      <Cards />
+      <Cards monthly={monthly}/>
     </div>
   );
 }
