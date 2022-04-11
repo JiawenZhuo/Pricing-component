@@ -20,9 +20,9 @@ Bonus: Complete the challenge with just HTML and CSS
 
 
 ## Build with
-Semantic HTML5 markup
-CSS custom properties
-Flexbox
-Styled-component
-react.js
+* Semantic HTML5 markup
+* CSS custom properties
+* Flexbox
+* Styled-component
+* react.js
 
